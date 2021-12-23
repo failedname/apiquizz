@@ -12,8 +12,6 @@
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
 - **Javier Nuñez** - _Trabajo Inicial_ - [Failedname](https://github.com/Failedname)
 
 ---
