@@ -20,5 +20,6 @@ router.get("/opcion", Opcion.getAll);
 
 //Routes ganador
 router.post("/ganador", Ganador.create);
+router.get("/ganador", Ganador.getAll);
 
 module.exports = router;
