@@ -11,8 +11,6 @@ exports.getAll = (req, res) => {
 };
 exports.create = (req, res) => {
   const { jugador, score } = req.body;
-  console.log(req);
-  console.log(jugador);
   db.none("INSERT INTO ganador(nombre,puntos) VALUES($1,$2)", [jugador, score])
     .then(() => {
       res.status(200).json({

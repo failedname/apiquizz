@@ -37,3 +37,16 @@ exports.getALL = (req, res) => {
       });
     });
 };
+
+//categorias que contengas preguntas
+exports.getCategoria = (req, res) => {
+  db.any(
+    "SELECT DISTINCT categoria.id,  categoria.nombre,  categoria.nivel FROM categoria INNER JOIN pregunta ON  categoria.id = pregunta.idcategoria INNER JOIN opcion ON  pregunta.id = opcion.idpregunta"
+  ).then((data) => {
+    res.status(200).json({
+      status: "success",
+      message: "Retrieved ALL categoria",
+      data: data,
+    });
+  });
+};
